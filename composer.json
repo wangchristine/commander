@@ -12,5 +12,12 @@
         "psr-4": {
             "CHHW\\Commander\\": "src"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CHHW\\Commander\\CommanderServiceProvider"
+            ]
+        }
+    },
 }
