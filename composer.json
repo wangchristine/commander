@@ -1,0 +1,12 @@
+{
+    "name": "chhw/commander",
+    "description": "automatically generate command",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CHHW\\Commander\\": "src"
+        }
+    }
+}
