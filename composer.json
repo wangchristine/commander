@@ -1,6 +1,6 @@
 {
     "name": "chhw/commander",
-    "description": "automatically generate command",
+    "description": "This package gives you to automatically generate service/repository class, which is extended by Laravel original make commands.",
     "keywords": ["laravel", "command", "generate"],
     "license": "MIT",
     "minimum-stability": "stable",
