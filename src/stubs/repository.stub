@@ -2,8 +2,6 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Http\Request;
-
 class DummyClass
 {
     /**
