@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\DummyModelPath;
+use CHHW\Commander\Repositories\BaseRepository as Repository;
+
+class DummyClass extends Repository
+{
+    /**
+     * Create a new repository instance.
+     *
+     * @param DummyModelName $model
+     * @return void
+     */
+    public function __construct(DummyModelName $model)
+    {
+        $this->model = $model;
+    }
+
+}

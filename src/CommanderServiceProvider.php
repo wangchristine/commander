@@ -29,6 +29,12 @@ class CommanderServiceProvider extends ServiceProvider
         ));
     }
 
+    /**
+     * Register the given commands.
+     *
+     * @param  array  $commands
+     * @return void
+     */
     protected function registerCommands(array $commands)
     {
         foreach (array_keys($commands) as $command) {
@@ -38,6 +44,11 @@ class CommanderServiceProvider extends ServiceProvider
         $this->commands(array_values($commands));
     }
 
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
     protected function registerServiceMakeCommand()
     {
         $this->app->singleton('command.service.make', function ($app) {
@@ -45,6 +56,11 @@ class CommanderServiceProvider extends ServiceProvider
         });
     }
 
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
     protected function registerRepositoryMakeCommand()
     {
         $this->app->singleton('command.repository.make', function ($app) {
