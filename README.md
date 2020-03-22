@@ -27,7 +27,7 @@ If you are under Laravel 5.5, please add this code in `config/app.php` below.
 > Create a new service class.
 
 ```bash
-    $ php artisan make:service TestService
+    $ php artisan make:service UserService
 ```
 
 ### Generate Repository:
@@ -35,5 +35,11 @@ If you are under Laravel 5.5, please add this code in `config/app.php` below.
 > Create a new repository class.
 
 ```bash
-    $ php artisan make:repository TestRepository
+    $ php artisan make:repository UserRepository
+```
+
+> Or you can create a new repository class with `--model=`
+
+```bash
+    $ php artisan make:repository UserRepository --model=User
 ```
