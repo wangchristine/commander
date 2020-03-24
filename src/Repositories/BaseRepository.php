@@ -30,6 +30,30 @@ abstract class BaseRepository
     }
 
     /**
+     * Execute the query and get the first result or throw an exception.
+     *
+     * @param  array  $columns
+     * @return \Illuminate\Database\Eloquent\Model|static
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function firstOrFail($columns = ['*'])
+    {
+        return $this->model->firstOrFail($columns);
+    }
+
+    /**
+     * Execute the query as a "select" statement.
+     *
+     * @param  array  $columns
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public function get($columns = ['*'])
+    {
+        return $this->model->get($columns);
+    }
+
+    /**
      * Save a new model and return the instance.
      *
      * @param  array  $attributes
@@ -49,5 +73,16 @@ abstract class BaseRepository
     public function with($relations)
     {
         return $this->model->with($relations);
+    }
+
+    /**
+     * Destroy the models for the given IDs.
+     *
+     * @param  \Illuminate\Support\Collection|array|int  $ids
+     * @return int
+     */
+    public function destroy($ids)
+    {
+        return $this->model->destroy($ids);
     }
 }
