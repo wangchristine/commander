@@ -43,3 +43,33 @@ If you are under Laravel 5.5, please add this code in `config/app.php` below.
 ```bash
     $ php artisan make:repository UserRepository --model=User
 ```
+
+# Supported methods
+
+> You can use these methods in service:
+
+1. all($columns = ['*'])
+2. find($id, $columns = ['*'])
+3. firstOrFail($columns = ['*'])
+4. get($columns = ['*'])
+5. create(array $attributes = [])
+6. with($relations)
+7. destroy($ids)
+
+### Example:
+
+app/Services/UserService.php
+
+```
+protected $userRepository;
+
+public function __construct(UserRepository $repository)
+{
+    $this->userRepository = $repository;
+}
+
+public function getAll()
+{
+    return $this->userRepository->all();
+}
+```
