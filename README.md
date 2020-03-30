@@ -1,6 +1,6 @@
 # Laravel Commander
 
-> This package extends Laravel 5 / 6 generating commands.
+> This package extends Laravel 5 / 6 / 7 generating commands.
 
 # Installation
 
