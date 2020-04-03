@@ -54,6 +54,18 @@ abstract class BaseRepository
     }
 
     /**
+     * Get the first record matching the attributes or create it.
+     *
+     * @param  array  $attributes
+     * @param  array  $values
+     * @return \Illuminate\Database\Eloquent\Model|static
+     */
+    public function firstOrCreate(array $attributes, array $values = [])
+    {
+        return $this->model->firstOrCreate($attributes, $values);
+    }
+
+    /**
      * Save a new model and return the instance.
      *
      * @param  array  $attributes
