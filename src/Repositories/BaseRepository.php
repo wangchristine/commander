@@ -97,4 +97,28 @@ abstract class BaseRepository
     {
         return $this->model->destroy($ids);
     }
+
+    /**
+     * @param  int|null  $perPage
+     * @param  array     $columns
+     * @param  string    $pageName
+     * @param  int|null  $page
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
+    {
+        return $this->model->paginate($perPage, $columns, $pageName, $page);
+    }
+
+    /**
+     * @param  int|null  $perPage
+     * @param  array     $columns
+     * @param  string    $pageName
+     * @param  int|null  $page
+     * @return \Illuminate\Contracts\Pagination\Paginator
+     */
+    public function simplePaginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
+    {
+        return $this->model->simplePaginate($perPage, $columns, $pageName, $page);
+    }
 }
