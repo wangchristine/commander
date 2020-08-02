@@ -55,6 +55,8 @@ If you are under Laravel 5.5, please add this code in `config/app.php` below.
 5. create(array $attributes = [])
 6. with($relations)
 7. destroy($ids)
+8. paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
+9. simplePaginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
 
 ### Example:
 
