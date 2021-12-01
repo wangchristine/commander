@@ -2,7 +2,7 @@
 
 > This package extends Laravel generating commands.
 
-### Also support lumen now!!
+### Also support Lumen now!!
 
 # Installation
 
