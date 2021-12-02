@@ -2,8 +2,6 @@
 
 > This package extends Laravel generating commands.
 
-### Also support Lumen now!!
-
 # Installation
 
 Install by composer
@@ -21,6 +19,14 @@ If you are under Laravel 5.5, please add this code in `config/app.php` below.
         ],
     ?>
 ```
+
+## Also support Lumen now!!
+
+In `bootstrap/app.php`, you should:
+1. uncomment `$app->withEloquent();`
+2. add `$app->register(CHHW\Commander\CommanderServiceProvider::class);`
+
+And add `config/database.php` just like Laravel.
 
 # Usage
 
